@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--设置-->
+        <scene sceneID="NpA-rN-KqA">
+            <objects>
+                <viewController storyboardIdentifier="SetingController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="2py-DE-wzA" customClass="SetingController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ijf-xw-Ml7">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bze-oT-XY0">
+                                <rect key="frame" x="161" y="433" width="92" height="30"/>
+                                <state key="normal" title="这是设置页面"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="PfO-hj-u0c"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Bze-oT-XY0" firstAttribute="centerX" secondItem="ijf-xw-Ml7" secondAttribute="centerX" id="lmp-ui-b5Y"/>
+                            <constraint firstItem="Bze-oT-XY0" firstAttribute="centerY" secondItem="ijf-xw-Ml7" secondAttribute="centerY" id="p5k-cX-kD1"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="设置" id="7DQ-cf-Qae"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kcy-UG-EQM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-58" y="65"/>
+        </scene>
+        <!--首页-->
+        <scene sceneID="Shq-DP-Ou5">
+            <objects>
+                <viewController storyboardIdentifier="HomeController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="DCk-Wy-2la" customClass="HomeController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Dk7-Hx-VYI">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jg4-7h-ruS">
+                                <rect key="frame" x="176" y="433" width="62" height="30"/>
+                                <state key="normal" title="这是首页"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="djQ-TQ-A0Z"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="jg4-7h-ruS" firstAttribute="centerX" secondItem="Dk7-Hx-VYI" secondAttribute="centerX" id="bvi-bK-HZD"/>
+                            <constraint firstItem="jg4-7h-ruS" firstAttribute="centerY" secondItem="Dk7-Hx-VYI" secondAttribute="centerY" id="sw5-hX-5Bg"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="首页" id="uvs-nH-rm8"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="F41-Kd-9cq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-62" y="-622"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="n1f-6j-1IN">
+            <objects>
+                <tabBarController id="n8Y-oz-fXI" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="mOd-Pl-jqb">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="DCk-Wy-2la" kind="relationship" relationship="viewControllers" id="3HQ-94-QFu"/>
+                        <segue destination="2py-DE-wzA" kind="relationship" relationship="viewControllers" id="Je8-mE-1fl"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dpT-vA-zgl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-948" y="-238"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
